@@ -1074,6 +1074,130 @@
         --alignment: right;
         --flex-alignment: flex-end;
       }
+      .columns02 > .wrapper {
+        display: inline-block;
+        width: 38rem;
+        background-color: transparent;
+      }
+      .columns02 > .wrapper > .inner {
+        --gutters: 2.5rem;
+        --padding-horizontal: 0rem;
+        --padding-vertical: 2rem;
+        --spacing: 1rem;
+        padding: var(--padding-vertical) var(--padding-horizontal);
+      }
+      .columns02.default > .wrapper > .inner > * {
+        margin-bottom: var(--spacing);
+        margin-top: var(--spacing);
+      }
+      .columns02.default > .wrapper > .inner > *:first-child {
+        margin-top: 0 !important;
+      }
+      .columns02.default > .wrapper > .inner > *:last-child {
+        margin-bottom: 0 !important;
+      }
+      .columns02.columns > .wrapper > .inner {
+        flex-wrap: wrap;
+        display: flex;
+        align-items: center;
+      }
+      .columns02.columns > .wrapper > .inner > * {
+        flex-grow: 0;
+        flex-shrink: 0;
+        max-width: 100%;
+        text-align: var(--alignment);
+        padding: 0 0 0 var(--gutters);
+      }
+      .columns02.columns > .wrapper > .inner > * > * {
+        margin-bottom: var(--spacing);
+        margin-top: var(--spacing);
+      }
+      .columns02.columns > .wrapper > .inner > * > *:first-child {
+        margin-top: 0 !important;
+      }
+      .columns02.columns > .wrapper > .inner > * > *:last-child {
+        margin-bottom: 0 !important;
+      }
+      .columns02.columns > .wrapper > .inner > *:first-child {
+        margin-left: calc(var(--gutters) * -1);
+      }
+      .columns02.default > .wrapper > .inner > .full {
+        margin-left: calc(var(--padding-horizontal) * -1);
+        max-width: none !important;
+        width: calc(100% + (var(--padding-horizontal) * 2) + 0.4725px);
+      }
+      .columns02.default > .wrapper > .inner > .full:first-child {
+        margin-top: calc(var(--padding-vertical) * -1) !important;
+        border-top-left-radius: inherit;
+        border-top-right-radius: inherit;
+      }
+      .columns02.default > .wrapper > .inner > .full:last-child {
+        margin-bottom: calc(var(--padding-vertical) * -1) !important;
+        border-bottom-left-radius: inherit;
+        border-bottom-right-radius: inherit;
+      }
+      .columns02.columns > .wrapper > .inner > div > .full {
+        margin-left: calc(var(--gutters) * -0.5);
+        max-width: none !important;
+        width: calc(100% + var(--gutters) + 0.4725px);
+      }
+      .columns02.columns > .wrapper > .inner > div:first-child > .full {
+        margin-left: calc(var(--padding-horizontal) * -1);
+        width: calc(
+          100% + var(--padding-horizontal) + calc(var(--gutters) * 0.5) +
+            0.4725px
+        );
+      }
+      .columns02.columns > .wrapper > .inner > div:last-child > .full {
+        width: calc(
+          100% + var(--padding-horizontal) + calc(var(--gutters) * 0.5) +
+            0.4725px
+        );
+      }
+      .columns02.columns > .wrapper > .inner > div > .full:first-child {
+        margin-top: calc(var(--padding-vertical) * -1) !important;
+      }
+      .columns02.columns > .wrapper > .inner > div > .full:last-child {
+        margin-bottom: calc(var(--padding-vertical) * -1) !important;
+      }
+      .columns02.columns > .wrapper > .inner > .full {
+        align-self: stretch;
+      }
+      .columns02.columns > .wrapper > .inner > .full:first-child {
+        border-bottom-left-radius: inherit;
+        border-top-left-radius: inherit;
+      }
+      .columns02.columns > .wrapper > .inner > .full:last-child {
+        border-bottom-right-radius: inherit;
+        border-top-right-radius: inherit;
+      }
+      .columns02.columns
+        > .wrapper
+        > .inner
+        > .full
+        > .full:first-child:last-child {
+        border-radius: inherit;
+        height: calc(100% + (var(--padding-vertical) * 2));
+      }
+      .columns02.columns
+        > .wrapper
+        > .inner
+        > .full
+        > .full:first-child:last-child
+        > * {
+        border-radius: inherit;
+        height: 100%;
+        position: absolute;
+        width: 100%;
+      }
+      .columns02 > .wrapper > .inner > :nth-child(1) {
+        width: calc(50% + (var(--gutters) / 2));
+        --alignment: left;
+        --flex-alignment: flex-start;
+      }
+      .columns02 > .wrapper > .inner > :nth-child(2) {
+        width: calc(50% + (var(--gutters) / 2));
+      }
       hr {
         border: 0;
         padding: 0;
@@ -2388,6 +2512,131 @@
           min-height: 100% !important;
           width: 100% !important;
         }
+        .columns02 {
+          --alignment: center;
+          --flex-alignment: center;
+        }
+        .columns02 > .wrapper > .inner {
+          --gutters: 1.875rem;
+          --padding-horizontal: 0rem;
+          --padding-vertical: 2rem;
+          --spacing: 1rem;
+        }
+        .columns02.columns > .wrapper > .inner {
+          flex-direction: column !important;
+          flex-wrap: nowrap !important;
+        }
+        .columns02.columns > .wrapper > .inner > span {
+          height: 0;
+          margin-top: calc(var(--gutters) * -1);
+          pointer-events: none;
+          visibility: hidden;
+        }
+        .columns02.columns > .wrapper > .inner > *:first-child {
+          margin-left: 0 !important;
+          padding-top: 0 !important;
+        }
+        .columns02.columns > .wrapper > .inner > * {
+          padding: calc(var(--gutters) * 0.5) 0 !important;
+        }
+        .columns02.columns > .wrapper > .inner > *:last-child {
+          padding-bottom: 0 !important;
+        }
+        .columns02.columns > .wrapper > .inner > div > .full {
+          margin-left: calc(var(--padding-horizontal) * -1);
+          width: calc(100% + (var(--padding-horizontal) * 2) + 0.4725px);
+        }
+        .columns02.columns > .wrapper > .inner > div:first-of-type > .full {
+          margin-left: calc(var(--padding-horizontal) * -1);
+          width: calc(100% + (var(--padding-horizontal) * 2) + 0.4725px);
+        }
+        .columns02.columns > .wrapper > .inner > div:last-of-type > .full {
+          margin-left: calc(var(--padding-horizontal) * -1);
+          width: calc(100% + (var(--padding-horizontal) * 2) + 0.4725px);
+        }
+        .columns02.columns > .wrapper > .inner > div > .full:first-child {
+          margin-top: calc(var(--gutters) * -0.5) !important;
+        }
+        .columns02.columns > .wrapper > .inner > div > .full:last-child {
+          margin-bottom: calc(var(--gutters) * -0.5) !important;
+        }
+        .columns02.columns
+          > .wrapper
+          > .inner
+          > div:first-of-type
+          > .full:first-child {
+          margin-top: calc(var(--padding-vertical) * -1) !important;
+        }
+        .columns02.columns
+          > .wrapper
+          > .inner
+          > div:last-of-type
+          > .full:last-child {
+          margin-bottom: calc(var(--padding-vertical) * -1) !important;
+        }
+        .columns02.columns > .wrapper > .inner > div:first-of-type,
+        .columns02.columns
+          > .wrapper
+          > .inner
+          > div:first-of-type
+          > .full:first-child {
+          border-top-left-radius: inherit;
+          border-top-right-radius: inherit;
+        }
+        .columns02.columns > .wrapper > .inner > div:last-of-type,
+        .columns02.columns
+          > .wrapper
+          > .inner
+          > div:last-of-type
+          > .full:last-child {
+          border-bottom-left-radius: inherit;
+          border-bottom-right-radius: inherit;
+        }
+        .columns02.columns > .wrapper > .inner > div:first-of-type,
+        .columns02.columns
+          > .wrapper
+          > .inner
+          > div:first-of-type
+          > .full:last-child {
+          border-bottom-left-radius: 0 !important;
+        }
+        .columns02.columns > .wrapper > .inner > div:last-of-type,
+        .columns02.columns
+          > .wrapper
+          > .inner
+          > div:last-of-type
+          > .full:first-child {
+          border-top-right-radius: 0 !important;
+        }
+        .columns02.columns
+          > .wrapper
+          > .inner
+          > .full
+          > .full:first-child:last-child {
+          height: auto;
+        }
+        .columns02.columns
+          > .wrapper
+          > .inner
+          > .full
+          > .full:first-child:last-child
+          > * {
+          height: auto;
+          position: relative;
+          width: auto;
+        }
+        .columns02 > .wrapper > .inner > :nth-child(1) {
+          --alignment: center;
+          --flex-alignment: center;
+          min-height: 100% !important;
+          width: 100% !important;
+        }
+        .columns02 > .wrapper > .inner > :nth-child(2) {
+          --alignment: center;
+          --flex-alignment: center;
+          min-height: 100% !important;
+          width: 100% !important;
+        }
         .divider02:before {
           width: 100rem;
         }
@@ -2557,6 +2806,9 @@
         .columns01 > .wrapper > .inner {
           --spacing: 0.875rem;
         }
+        .columns02 > .wrapper > .inner {
+          --spacing: 0.875rem;
+        }
         #form01 .actions button {
           max-width: 32rem;
           width: 100%;
@@ -2619,6 +2871,12 @@
           --spacing: 0.75rem;
         }
         .columns01 > .wrapper > .inner {
+          --gutters: 1.875rem;
+          --padding-horizontal: 0rem;
+          --padding-vertical: 1.5rem;
+          --spacing: 0.75rem;
+        }
+        .columns02 > .wrapper > .inner {
           --gutters: 1.875rem;
           --padding-horizontal: 0rem;
           --padding-vertical: 1.5rem;
@@ -2760,7 +3018,7 @@
               </div>
             </div>
             <hr class="divider02" />
-            <div class="container columns columns01">
+            <div class="container columns columns02">
               <div class="wrapper">
                 <div class="inner">
                   <div>
