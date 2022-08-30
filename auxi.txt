@@ -28,6 +28,108 @@ gallery02  TRABAJOS
 gallery06  FOTOS PROYECTOS
 gallery01  FOTOS PROYECTOS MECANICA
 
-form01    MANDAR MAIL
-
 icons01  CONTACTO ICONOS
+
+Para colocar captions en fotos:
+          <section id="bycicle-crank-section">
+            <ul class="buttons buttons03">
+              <li>
+                <a href="#mechanical-engineering" class="button n01">Back</a>
+              </li>
+            </ul>
+            <h2 class="text10">Bicycle crank</h2>
+            <p class="text16">
+              <span class="p"
+                ><strong
+                  >Model and Analysis: CATIA V5<br />
+                  Render: Keyshot</strong
+                ></span
+              ><span class="p"
+                >A simple bicycle crank modelled specifically to practice
+                structural analysis skills using CATIA V5. It is a simple part
+                designed using CATIA V5 mechanical design module. The analysis
+                carried out to check its structural behaviour is a static loads
+                analysis. </span
+              ><span class="p"
+                >As for the boundary conditions, the side attached to the
+                bicycle's body has a clamped property. The other side has a
+                rigid element that connects the inner circle to the point
+                simulating the pedal, where a downwards force is applied.</span
+              ><span class="p"
+                >Concerning the tensions, the results show that the design is
+                rigid enough to withstand the applied forces. It won't break,
+                but it will suffer plasticization at the border of the cylinder
+                attached to the pedal, where the small red line appears. </span
+              ><span class="p"
+                >We can see that the deformation is also very high (11 mm). This
+                maximum happens in the force applying point, which corresponds
+                to the pedal. The design goal is to have a deformation small
+                enough not to affect the pedal performance, as well as tensions
+                lower than the yielding stress, to ensure that it won't
+                plasticize or break.</span
+              ><span class="p"
+                >As stated before, the model will plasticize in the smaller
+                cylinder area, so this model is not suitable for the task.
+                Besides, when doing structural analyses, we must also consider a
+                safety factor (in this analysis 1,5) that multiplies the
+                obtained maximum stress, so it would be even higher than the one
+                we can see in the pictures. </span
+              ><span class="p"
+                >To solve this problem, we could consider adding more material
+                in the plasticizing area or using a more resistant material,
+                which would increase the weight or using some composites. This
+                last is a very light material but would increase the price of
+                the part.</span
+              >
+            </p>
+            <div class="gallery gallery01">
+              <div class="inner">
+                <ul>
+                  <li>
+                    <img
+                      src="images/mechanics/bycicle crank/01Biela de Bicicleta.jpg"
+                      alt="Bycicle crank 3d"
+                    />
+                    <div class="caption"><p>3d clamp</p></div>
+                  </li>
+                  <li>
+                    ><img
+                      src="images/mechanics/bycicle crank/Condiciones de Contorno.jpg"
+                      alt="Boundary conditions"
+                    />
+                    <div class="caption"><p>Boundary conditions</p></div>
+                  </li>
+                  <li>
+                    <img
+                      src="images/mechanics/bycicle crank/Von Mises.jpg"
+                      alt="Von Mises Stress"
+                    />
+                    <div class="caption"><p>Von Mises Stress</p></div>
+                  </li>
+                  <li>
+                    <img
+                      src="images/mechanics/bycicle crank/Tension Principal.jpg"
+                      alt="Von Mises Stress"
+                    />
+                    <div class="caption"><p>Stress Principal Tensor</p></div>
+                  </li>
+                  <li>
+                    <img
+                      src="images/mechanics/bycicle crank/Deformacion.jpg"
+                      alt="Displacement"
+                    />
+                    <div class="caption"><p>Displacement</p></div>
+                  </li>
+                </ul>
+              </div>
+              <ul class="buttons buttons03">
+                <li>
+                  <a
+                    href="https://www.behance.net/gallery/148734963/Bicycle-crank"
+                    target="_blank"
+                    class="button n01"
+                    >3D Model</a
+                  >
+                </li>
+              </ul>
+            </div>
