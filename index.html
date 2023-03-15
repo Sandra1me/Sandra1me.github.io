@@ -846,8 +846,8 @@
       }
 
       .image .frame {
-        -webkit-backface-visibility: hidden;
-        -webkit-transform: translate3d(0, 0, 0);
+        backface-visibility: hidden;
+        transform: translate3d(0, 0, 0);
         display: inline-block;
         max-width: 100%;
         overflow: hidden;
@@ -1657,8 +1657,8 @@
       }
 
       .gallery ul li .frame {
-        -webkit-backface-visibility: hidden;
-        -webkit-transform: translate3d(0, 0, 0);
+        backface-visibility: hidden;
+        transform: translate3d(0, 0, 0);
         display: inline-block;
         overflow: hidden;
         vertical-align: top;
@@ -1869,6 +1869,37 @@
       .gallery02 ul li .thumbnail:hover {
         transform: rotate(5.625deg);
         z-index: 1;
+      }
+
+      .gallery02 ul li .caption {
+        align-items: flex-start;
+        border-radius: inherit;
+        display: flex;
+        height: 100%;
+        left: 0;
+        pointer-events: none;
+        position: absolute;
+        top: 0;
+        transition: opacity 0.25s ease, transform 0.25s ease, z-index 0.25s ease;
+      }
+
+      .gallery02 ul li .caption p {
+        border-top-left-radius: inherit;
+        border-top-right-radius: inherit;
+        padding-bottom: 0.625rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        padding-top: 0.625rem;
+        color: #000000;
+        background-color: rgba(255, 255, 255, 0.667);
+        font-family: "Source Sans Pro", sans-serif;
+        letter-spacing: 0.025rem;
+        font-size: 0.75em;
+        line-height: 1.5;
+        overflow-x: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        font-weight: 200;
       }
 
       .gallery06 {
@@ -3064,16 +3095,29 @@
       <div id="main">
         <div class="inner">
           <section id="home-section">
+            <ul id="links04" class="links">
+              <li class="n01"><a href="#home">Home</a></li>
+              <li class="n02"><a href="#about">About</a></li>
+              <li class="n03">
+                <a href="#full-time-jobs">Projects</a>
+              </li>
+              <li class="n04">
+                <a href="https://sandramartin.hashnode.dev/">Blog</a>
+              </li>
+            </ul>
+            <br />
             <div id="columns03" class="container default">
               <div class="wrapper">
                 <div class="inner">
                   <div id="image03" class="image">
                     <a href="#home-section" class="frame"
-                      ><img src="images/Lobo_SM_Web.png" alt="Logo"
+                      ><img src="images/home/Lobo_SM_Web.png" alt="Logo"
                     /></a>
                   </div>
                   <h1 id="text03">Sandra Martín Elías</h1>
-                  <h3 id="text09">Industrial Technology Engineer</h3>
+                  <h3 id="text09">
+                    Industrial Technology Engineer. Mechatronics Engineer.
+                  </h3>
                 </div>
               </div>
             </div>
@@ -3085,8 +3129,11 @@
                     <p class="text02">
                       <span class="p"
                         ><strong>ABOUT</strong><br />
-                        Discover a little bit more about me and my education and
-                        working experience.</span
+                        My passion for finding creative solutions to engineering
+                        challenges has led me to design and develop innovative
+                        projects in different industries. Click to learn more
+                        about me and my background in mechatronics
+                        engineering.</span
                       >
                     </p>
                     <ul class="buttons buttons02">
@@ -3096,7 +3143,7 @@
                   <div>
                     <div class="image image02">
                       <a href="#about" class="frame"
-                        ><img src="images/About.jpg" alt="About me"
+                        ><img src="images/home/about.jpg" alt="About me"
                       /></a>
                     </div>
                   </div>
@@ -3110,7 +3157,7 @@
                   <div>
                     <div class="image image02">
                       <a href="#full-time-jobs" class="frame"
-                        ><img src="images/Portfolio.jpg" alt="Portfolio"
+                        ><img src="images/home/portfolio.jpg" alt="Portfolio"
                       /></a>
                     </div>
                   </div>
@@ -3118,8 +3165,9 @@
                     <p class="text02">
                       <span class="p"
                         ><strong>PORTFOLIO</strong><br />
-                        Discover my most relevant and fascinating projects and
-                        my different full-time jobs.</span
+                        Discover my professional career and the most outstanding
+                        projects I have worked on as a mechatronics
+                        engineer.</span
                       >
                     </p>
                     <ul class="buttons buttons02">
@@ -3139,8 +3187,9 @@
                     <p class="text02">
                       <span class="p"
                         ><strong>BLOG</strong><br />
-                        Read my articles about different topics related to the
-                        engineering world.</span
+                        On my blog, I share my experiences, knowledge and
+                        discoveries in the world of mechatronics engineering. Do
+                        not miss it!</span
                       >
                     </p>
                     <ul class="buttons buttons02">
@@ -3156,7 +3205,7 @@
                   <div>
                     <div class="image image02">
                       <a href="https://sandramartin.hashnode.dev/" class="frame"
-                        ><img src="images/Blog.jpg" alt="Blog"
+                        ><img src="images/home/blog.jpg" alt="Blog"
                       /></a>
                     </div>
                   </div>
@@ -3165,92 +3214,125 @@
             </div>
           </section>
           <section id="about-section">
-            <ul class="buttons buttons03">
-              <li><a href="#home" class="button n01">Back</a></li>
+            <ul id="links05" class="links">
+              <li class="n01"><a href="#home">Home</a></li>
+              <li class="n02"><a href="#about">About</a></li>
+              <li class="n03">
+                <a href="#full-time-jobs">Projects</a>
+              </li>
+              <li class="n04">
+                <a href="https://sandramartin.hashnode.dev/">Blog</a>
+              </li>
             </ul>
+            <br />
             <h2 class="text10">A LITTLE ABOUT ME!</h2>
+            <p class="text16">
+              <span class="p">
+                Hello! My name is Sandra, and I am an Industrial Technology
+                Engineer (mechatronics speciality) with a passion for
+                technology, learning, and innovation. I graduated as an
+                industrial technology engineer specializing in mechanics. After
+                that, I finished my master's degree in mechanical design.
+                Currently, I am studying for a master's degree to specialize in
+                electronics and automation.</span
+              ><span class="p"
+                >I have worked on engineering projects in various companies,
+                from a designer of mechanisms for the space sector to an
+                engineer of wind turbine systems.</span
+              ><span class="p"
+                >I consider myself a person with a great desire to learn, always
+                looking for new challenges and opportunities to continue growing
+                as a professional and to contribute to the development of
+                fascinating engineering projects!</span
+              >
+            </p>
             <div id="image06" class="image">
               <span class="frame"
-                ><img src="images/Yo2.jpg" alt="This is me"
+                ><img src="images/about/About.jpg" alt="This is me"
               /></span>
             </div>
             <p class="text16">
               <span class="p"
-                ><strong>HEY THERE!</strong><br />
-                My name is Sandra, and if you didn&#039;t notice, I like animals
-                a lot! Let me tell you who I am:</span
+                ><strong>MY PROFESSIONAL CAREER:</strong><br />In my last year
+                of university, I joined my colleague's "Formula Student" team,
+                where I learned to design different elements for racing
+                vehicles. In this team, I had the opportunity to introduce
+                myself a bit to the professional world.</span
               ><span class="p"
-                >I&#039;m an industrial technology engineer specializing in
-                mechanical engineering. Currently, I&#039;m also on the way to
-                finishing my electronics and automatics master&#039;s degree,
-                which will help me become a mechatronics engineer.</span
+                >After graduating, I started working as an intern at different
+                companies. The first was Microdeco, where I was responsible for
+                parts approval in the quality department. There, I enormously
+                developed my customer service and report-writing skills. Later,
+                I took the opportunity to do an internship at Altran as a
+                structural designer for an air taxi. I worked on highly
+                innovative and challenging projects that helped me develop my
+                technical design skills and teamwork.</span
               ><span class="p"
-                >I have a degree in industrial engineering (focused on
-                mechanical engineering) and a master&#039;s degree in CAD, FEM
-                and simulation with CATIA V5 and SolidWorks.</span
+                >After a year as an intern, I leapt and started at Sener
+                Aeroespacial, where I worked as a mechanism designer for the
+                aerospace sector. After two years in this sector, I tried out in
+                the renewable energy sector at Siemens Gamesa, supporting the
+                wind turbine manufacturing and assembly team. I was in charge,
+                together with my teammates, of solving any doubts they might
+                have regarding actuation systems.</span
               ><span class="p"
-                >I&#039;m also improving my programming skills by practising and
-                taking different courses. Right now, I&#039;m focused on
-                developing my knowledge of MATLAB and Python by taking various
-                lessons and doing diverse projects.</span
-              ><span class="p">- - - - -</span
+                >Currently, I am at Airbus Defense and Space as a mechanical
+                design engineer. I specialize in the fuel system for innovative
+                and challenging projects that will mark a before and after in
+                military aviation. </span
+              ><br /><span class="p"
+                ><strong>TECHNICAL SKILLS:</strong><br />
+                - Mechanical Design: CATIA V5, SolidWorks<br />
+                - Mechanical Analysis: CATIA V5, SolidWorks<br />
+                - Rendering: Keyshot<br />
+                - Control and automation: PIC Microcontrollers (C, Assembly)<br />
+                - Programming: MATLAB, Python<br /> </span
               ><span class="p"
-                >I have more than four years of experience in mechanical
-                engineering, having worked for the aerospace, automotive and
-                wind industries. During those years, I was responsible for
-                making different designs and structural analyses with CATIA V5
-                and Hypermesh, both for the aerospace and automotive industry.
-                Also, in one of my jobs, I was part of the quality team, in
-                charge of homologating different parts.</span
+                ><strong>SOFT SKILLS:</strong><br />
+                - Customer service and communication in English, Spanish and
+                Basque<br />
+                - Teamwork<br />
+                - Ability to adapt to changing work environments<br /> </span
               ><span class="p"
-                >During my time in the wind industry, I was in charge of
-                supporting factories and wind farms and designing different wind
-                farms. </span
-              ><span class="p"
-                >Also, I&#039;ve been working as a freelance translator and
-                mechanical design engineer for some months.</span
-              ><span class="p"
-                >I&#039;m currently working in the aerospace industry as a
-                mechanical design engineer. Here, my job is to design and
-                validate components and installation assemblies of mechanical
-                systems with CATIA V5 and 3DX for European military
-                aircraft.</span
-              ><span class="p">- - - - -</span
-              ><span class="p"
-                ><strong>MY SKILLS</strong><br />
-                - Design: AutoCAD, CATIA V5, NX Unigraphics, SolidWorks<br />
-                - Rendering: CATIA Composer, Keyshot<br />
-                - Structural Analysis: CATIA V5, SolidWorks</span
-              ><span class="p"
-                >- Programming Languages: MATLAB, Python<br />
-                - Code Editor: Spyder, Visual Studio Code<br />
-                - Version Control: Git, GitHub</span
-              ><span class="p">- - - - -</span
-              ><span class="p"
-                >If you want to see some of my projects and work, do not
-                hesitate and visit my
-                <a href="#full-time-jobs">PORTFOLIO!</a></span
-              ><span class="p"
-                >You can check my 3D models in my
-                <a target="_blank" href="https://www.behance.net/sandramartn5"
-                  >Behance</a
-                >
-                profile or my coding projects on
-                <a target="_blank" href="https://github.com/Sandra1me">GitHub</a
-                >.</span
+                ><strong>ACHIVEMENTS:</strong><br />
+                - I broke the record for the number of pieces approved in a
+                month thanks to a working method I carried out<br />
+                - As a design engineer, I finished a preliminary design from
+                scratch in three months, which we successfully submitted to the
+                ESA<br /> </span
+              ><br /><span class="p"
+                ><strong>GET TO KNOW ME BETTER:</strong><br />
+                In my leisure time, I like playing video games or working out. I
+                also enjoy creating new 3d models or programs, which allows me
+                to develop my design and programming skills more. In addition, I
+                also love spending time with my family and my pets. It is hard
+                for me to sit still when it is about looking for new challenges
+                and opportunities to learn something new.</span
               >
             </p>
           </section>
           <section id="full-time-jobs-section">
-            <ul class="buttons buttons03">
-              <li><a href="#home" class="button n01">Back</a></li>
+            <ul id="links01" class="links">
+              <li class="n01"><a href="#home">Home</a></li>
+              <li class="n02"><a href="#about">About</a></li>
+              <li class="n03">
+                <a href="#full-time-jobs">Projects</a>
+              </li>
+              <li class="n04">
+                <a href="https://sandramartin.hashnode.dev/">Blog</a>
+              </li>
             </ul>
-            <h2 class="text10">MY PORTFOLIO</h2>
+            <br />
+            <h2 class="text10">MY PROJECTS</h2>
             <ul id="links04" class="links">
               <li class="n01"><a href="#full-time-jobs">Full-Time Jobs</a></li>
-              <li class="n02"><a href="#freelance-jobs">Freelance Jobs</a></li>
-              <li class="n03">
+              <li class="n02">
                 <a href="#mechanical-engineering">Mechanical Engineering</a>
+              </li>
+              <li class="n03">
+                <a href="#electronics-authomatics"
+                  >Electronics and Authomatics</a
+                >
               </li>
               <li class="n04"><a href="#programming">Programming</a></li>
             </ul>
@@ -3261,132 +3343,100 @@
                     <a href="#formula-student-member" class="thumbnail"
                       ><span class="frame"
                         ><img
-                          src="images/full-time/Formula Student Member.jpg"
-                          alt="Formula Student Member" /></span
-                    ></a>
+                          src="images/projects/full-time/formula-student-member.jpg"
+                          alt="Formula Student Member"
+                      /></span>
+                      <div class="caption">
+                        <p>Formula Student Member</p>
+                      </div></a
+                    >
                   </li>
                   <li>
                     <a href="#ppap-writer" class="thumbnail"
                       ><span class="frame"
                         ><img
-                          src="images/full-time/PPAP Writer.jpg"
-                          alt="PPAP Writer for the Homologation of Parts" /></span
-                    ></a>
+                          src="images/projects/full-time/PPAP Writer for the Homologation of Parts.jpg"
+                          alt="PPAP Writer for Parts Homologation"
+                      /></span>
+                      <div class="caption">
+                        <p>PPAP Writer for Parts Homologation</p>
+                      </div></a
+                    >
                   </li>
                   <li>
                     <a href="#design-in-r-d" class="thumbnail"
                       ><span class="frame"
                         ><img
-                          src="images/full-time/Design and Structural Analysis in R_D.jpg"
-                          alt="Design and Structural Analysis in R&amp;D" /></span
-                    ></a>
+                          src="images/projects/full-time/Structural Design and Analysis in R&D.jpg"
+                          alt="Design and Structural Analysis in R&amp;D"
+                      /></span>
+                      <div class="caption">
+                        <p>Structural Design & Analysis in R&D</p>
+                      </div>
+                    </a>
                   </li>
                   <li>
                     <a href="#mechanical-design" class="thumbnail"
                       ><span class="frame"
                         ><img
-                          src="images/full-time/Mechanical Design Engineer.jpg"
-                          alt="Mechanical Design Engineer" /></span
-                    ></a>
+                          src="images/projects/full-time/Mechanical Design Engineer.jpg"
+                          alt="Mechanical Design Engineer"
+                      /></span>
+                      <div class="caption">
+                        <p>Mechanical Design Engineer</p>
+                      </div>
+                    </a>
                   </li>
                   <li>
                     <a href="#system-engineering-prof" class="thumbnail"
                       ><span class="frame"
                         ><img
-                          src="images/full-time/Systems Engineering Professional.jpg"
-                          alt="System Engineering Professional" /></span
-                    ></a>
+                          src="images/projects/full-time/Systems Engineering Professional.jpg"
+                          alt="Systems Engineering Professional"
+                      /></span>
+                      <div class="caption">
+                        <p>Systems Engineering Professional</p>
+                      </div>
+                    </a>
                   </li>
                   <li>
                     <a href="#mechanical-system" class="thumbnail"
                       ><span class="frame"
                         ><img
-                          src="images/full-time/mechanical systems.jpg"
-                          alt="Mechanical System Installation Design Engineer" /></span
-                    ></a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </section>
-          <section id="freelance-jobs-section">
-            <ul class="buttons buttons03">
-              <li><a href="#home" class="button n01">Back</a></li>
-            </ul>
-            <h2 class="text10">MY PORTFOLIO</h2>
-            <ul id="links05" class="links">
-              <li class="n01"><a href="#full-time-jobs">Full-Time Jobs</a></li>
-              <li class="n02"><a href="#freelance-jobs">Freelance Jobs</a></li>
-              <li class="n03">
-                <a href="#mechanical-engineering">Mechanical Engineering</a>
-              </li>
-              <li class="n04"><a href="#programming">Programming</a></li>
-            </ul>
-            <div class="gallery gallery02">
-              <div class="inner">
-                <ul>
-                  <li>
-                    <a href="#beekeeping-video" class="thumbnail"
-                      ><span class="frame"
-                        ><img
-                          src="images/freelance/Beekeeping Video Translation.jpg"
-                          alt="Beekeeping Video Translation" /></span
-                    ></a>
-                  </li>
-                  <li>
-                    <a href="#cnc-metal-sheet" class="thumbnail"
-                      ><span class="frame"
-                        ><img
-                          src="images/freelance/Metal Sheet For CNC Machining.jpg"
-                          alt="Metal Sheet for CNC Machining" /></span
-                    ></a>
-                  </li>
-                  <li>
-                    <a href="#basque-article" class="thumbnail"
-                      ><span class="frame"
-                        ><img
-                          src="images/freelance/Basque Article Translation.jpg"
-                          alt="Basque Article Translation" /></span
-                    ></a>
-                  </li>
-                  <li>
-                    <a href="#website-translation" class="thumbnail"
-                      ><span class="frame"
-                        ><img
-                          src="images/freelance/Website Translation.jpg"
-                          alt="Website Translation" /></span
-                    ></a>
-                  </li>
-                  <li>
-                    <a href="#training-ebook" class="thumbnail"
-                      ><span class="frame"
-                        ><img
-                          src="images/freelance/Training E-Book Translation.jpg"
-                          alt="Training E-Book Translation" /></span
-                    ></a>
-                  </li>
-                  <li>
-                    <a href="#master-degree" class="thumbnail"
-                      ><span class="frame"
-                        ><img
-                          src="images/freelance/Translation of a Master_s Degree Informative Document.jpg"
-                          alt="Translation of a Master&#039;s Degree Informative Document" /></span
-                    ></a>
+                          src="images/projects/full-time/Mechanical Systems Design Engineer.jpg"
+                          alt="Mechanical Systems Design Engineer"
+                      /></span>
+                      <div class="caption">
+                        <p>Mechanical Systems Design Engineer</p>
+                      </div>
+                    </a>
                   </li>
                 </ul>
               </div>
             </div>
           </section>
           <section id="mechanical-engineering-section">
-            <ul class="buttons buttons03">
-              <li><a href="#home" class="button n01">Back</a></li>
-            </ul>
-            <h2 class="text10">MY PORTFOLIO</h2>
             <ul id="links01" class="links">
-              <li class="n01"><a href="#full-time-jobs">Full-Time Jobs</a></li>
-              <li class="n02"><a href="#freelance-jobs">Freelance Jobs</a></li>
+              <li class="n01"><a href="#home">Home</a></li>
+              <li class="n02"><a href="#about">About</a></li>
               <li class="n03">
+                <a href="#mechanical-engineering">Projects</a>
+              </li>
+              <li class="n04">
+                <a href="https://sandramartin.hashnode.dev/">Blog</a>
+              </li>
+            </ul>
+            <br />
+            <h2 class="text10">MY PROJECTS</h2>
+            <ul id="links05" class="links">
+              <li class="n01"><a href="#full-time-jobs">Full-Time Jobs</a></li>
+              <li class="n02">
                 <a href="#mechanical-engineering">Mechanical Engineering</a>
+              </li>
+              <li class="n03">
+                <a href="#electronics-authomatics"
+                  >Electronics and Authomatics</a
+                >
               </li>
               <li class="n04"><a href="#programming">Programming</a></li>
             </ul>
@@ -3397,62 +3447,131 @@
                     <a href="#clamp" class="thumbnail"
                       ><span class="frame"
                         ><img
-                          src="images/Clamp_ Design _ Analysis.jpg"
-                          alt="Clamp: Design &amp; Analysis" /></span
-                    ></a>
+                          src="images/projects/mechanical engineering/Clamp.jpg"
+                          alt="Clamp Design and Analysis"
+                      /></span>
+                      <div class="caption">
+                        <p>Clamp Design and Analysis</p>
+                      </div>
+                    </a>
                   </li>
                   <li>
                     <a href="#steering-gear" class="thumbnail"
                       ><span class="frame"
                         ><img
-                          src="images/Steering Gear.jpg"
-                          alt="Steering gear" /></span
-                    ></a>
+                          src="images/projects/mechanical engineering/Steering Gear.jpg"
+                          alt="Steering Gear Design and Simulation"
+                      /></span>
+                      <div class="caption">
+                        <p>Steering Gear Design and Simulation</p>
+                      </div>
+                    </a>
                   </li>
                   <li>
                     <a href="#piston-rod" class="thumbnail"
                       ><span class="frame"
                         ><img
-                          src="images/Piston-Connecting Rod_ Design _ Analysis.jpg"
-                          alt="Piston Connecting Rod: Design &amp; Analysis" /></span
-                    ></a>
+                          src="images/projects/mechanical engineering/Piston-Connecting Rod.jpg"
+                          alt="Piston-Connecting Rod Design and Analysis"
+                      /></span>
+                      <div class="caption">
+                        <p>Piston-Connecting Rod Design and Analysis</p>
+                      </div>
+                    </a>
                   </li>
                   <li>
                     <a href="#welding" class="thumbnail"
                       ><span class="frame"
                         ><img
-                          src="images/weldingPos.jpg"
-                          alt="Welding positioner" /></span
-                    ></a>
+                          src="images/projects/mechanical engineering/Welding Positioner.jpg"
+                          alt="Welding Positioner Design"
+                      /></span>
+                      <div class="caption">
+                        <p>Welding Positioner Design</p>
+                      </div>
+                    </a>
                   </li>
                   <li>
                     <a href="#robot" class="thumbnail"
                       ><span class="frame"
                         ><img
-                          src="images/Manipulation Robot.jpg"
-                          alt="Manipulation Robot" /></span
-                    ></a>
+                          src="images/projects/mechanical engineering/Manipulation Robot.jpg"
+                          alt="Manipulation Robot Design"
+                      /></span>
+                      <div class="caption">
+                        <p>Manipulation Robot Design</p>
+                      </div>
+                    </a>
                   </li>
                   <li>
                     <a href="#pen" class="thumbnail"
                       ><span class="frame"
-                        ><img src="images/Pen.jpg" alt="Pen" /></span
-                    ></a>
+                        ><img
+                          src="images/projects/mechanical engineering/Pen.jpg"
+                          alt="Pen Design"
+                      /></span>
+                      <div class="caption">
+                        <p>Pen Design</p>
+                      </div>
+                    </a>
                   </li>
                 </ul>
               </div>
             </div>
           </section>
-          <section id="programming-section">
-            <ul class="buttons buttons03">
-              <li><a href="#home" class="button n01">Back</a></li>
+          <section id="electronics-authomatics-section">
+            <ul id="links01" class="links">
+              <li class="n01"><a href="#home">Home</a></li>
+              <li class="n02"><a href="#about">About</a></li>
+              <li class="n03">
+                <a href="#electronics-authomatics">Projects</a>
+              </li>
+              <li class="n04">
+                <a href="https://sandramartin.hashnode.dev/">Blog</a>
+              </li>
             </ul>
-            <h2 class="text10">MY PORTFOLIO</h2>
+            <br />
+            <h2 class="text10">MY PROJECTS</h2>
+            <ul id="links01" class="links">
+              <li class="n01"><a href="#full-time-jobs">Full-Time Jobs</a></li>
+              <li class="n02">
+                <a href="#mechanical-engineering">Mechanical Engineering</a>
+              </li>
+              <li class="n03">
+                <a href="#electronics-authomatics"
+                  >Electronics and Authomatics</a
+                >
+              </li>
+              <li class="n04"><a href="#programming">Programming</a></li>
+            </ul>
+            <div class="gallery gallery02">
+              <div class="inner">
+                <ul></ul>
+              </div>
+            </div>
+          </section>
+          <section id="programming-section">
+            <ul id="links01" class="links">
+              <li class="n01"><a href="#home">Home</a></li>
+              <li class="n02"><a href="#about">About</a></li>
+              <li class="n03">
+                <a href="#programming">Projects</a>
+              </li>
+              <li class="n04">
+                <a href="https://sandramartin.hashnode.dev/">Blog</a>
+              </li>
+            </ul>
+            <br />
+            <h2 class="text10">MY PROJECTS</h2>
             <ul id="links02" class="links">
               <li class="n01"><a href="#full-time-jobs">Full-Time Jobs</a></li>
-              <li class="n02"><a href="#freelance-jobs">Freelance Jobs</a></li>
-              <li class="n03">
+              <li class="n02">
                 <a href="#mechanical-engineering">Mechanical Engineering</a>
+              </li>
+              <li class="n03">
+                <a href="#electronics-authomatics"
+                  >Electronics and Authomatics</a
+                >
               </li>
               <li class="n04"><a href="#programming">Programming</a></li>
             </ul>
@@ -3463,55 +3582,89 @@
                     <a href="#hangman" class="thumbnail"
                       ><span class="frame"
                         ><img
-                          src="images/Python_ Hangman Project.jpg"
-                          alt="Python: Hangman Project" /></span
-                    ></a>
+                          src="images/projects/programming/Python Hangman Project.jpg"
+                          alt="Hangman Project"
+                      /></span>
+                      <div class="caption">
+                        <p>Hangman Project</p>
+                      </div>
+                    </a>
                   </li>
                   <li>
                     <a href="#mad-libs" class="thumbnail"
                       ><span class="frame"
                         ><img
-                          src="images/MATLAB_ Mad Libs Generator.jpg"
-                          alt="MATLAB: Mad Libs Generator" /></span
-                    ></a>
+                          src="images/projects/programming/MATLAB Mad Libs Generator.jpg"
+                          alt="Mad Libs Generator"
+                      /></span>
+                      <div class="caption">
+                        <p>Mad Libs Generator</p>
+                      </div>
+                    </a>
                   </li>
                   <li>
                     <a href="#rock-paper-scissors" class="thumbnail"
                       ><span class="frame"
                         ><img
-                          src="images/Python_ Rock, Paper, Scissors Game.jpg"
-                          alt="Python: Rock, Paper, Scissors Game" /></span
-                    ></a>
+                          src="images/projects/programming/Python Rock, Paper, Scissors Game.jpg"
+                          alt="Rock, Paper, Scissors Game"
+                      /></span>
+                      <div class="caption">
+                        <p>Rock, Paper, Scissors Game</p>
+                      </div>
+                    </a>
                   </li>
                   <li>
                     <a href="#magic-8-ball" class="thumbnail"
                       ><span class="frame"
                         ><img
-                          src="images/Python_magic8Ball.jpg"
-                          alt="Python: Magic 8-Ball Game" /></span
-                    ></a>
+                          src="images/projects/programming/Python Magic 8 Ball Game.jpg"
+                          alt="Magic 8-Ball Game"
+                      /></span>
+                      <div class="caption">
+                        <p>Magic 8-Ball Game</p>
+                      </div>
+                    </a>
                   </li>
                   <li>
                     <a href="#email-slicer" class="thumbnail"
                       ><span class="frame"
                         ><img
-                          src="images/Python_ Email Slicer Project.jpg"
-                          alt="Python: Email Slicer Project" /></span
-                    ></a>
+                          src="images/projects/programming/Python Target Practice Game.jpg"
+                          alt="Target Practice Game"
+                      /></span>
+                      <div class="caption">
+                        <p>Target Practice Game</p>
+                      </div>
+                    </a>
                   </li>
                   <li>
                     <a href="#encode-decode" class="thumbnail"
                       ><span class="frame"
                         ><img
-                          src="images/Python_Message Encode Decode.jpg"
-                          alt="Python: Message encode decode" /></span
-                    ></a>
+                          src="images/projects/programming/MATLAB Text Based Adventure Game.jpg"
+                          alt="Text Based Adventure Game"
+                      /></span>
+                      <div class="caption">
+                        <p>Text Based Adventure Game</p>
+                      </div>
+                    </a>
                   </li>
                 </ul>
               </div>
             </div>
           </section>
           <section id="formula-student-member-section">
+            <ul id="links01" class="links">
+              <li class="n01"><a href="#home">Home</a></li>
+              <li class="n02"><a href="#about">About</a></li>
+              <li class="n03">
+                <a href="#full-time-jobs">Projects</a>
+              </li>
+              <li class="n04">
+                <a href="https://sandramartin.hashnode.dev/">Blog</a>
+              </li>
+            </ul>
             <ul class="buttons buttons03">
               <li><a href="#full-time-jobs" class="button n01">Back</a></li>
             </ul>
@@ -3523,30 +3676,49 @@
                   September 2017 - May 2018</strong
                 ></span
               ><span class="p"
-                >While in my last year of college, I was part of a Formula
-                Student Team. There, I learned how to carry out static
-                structural analyses with Ansys. Also, I started creating my
-                first designs for the automotive industry using CATIA V5.</span
+                >During my last year of engineering degree in industrial
+                technology, I was part of the Formula Student team of my
+                faculty, a project that allowed me to develop skills in various
+                areas, from design and structural analysis to business
+                management and sponsorships.</span
               ><span class="p"
-                >Apart from that, I learned how to manufacture different parts
-                in the lathing machine.</span
+                >My area of expertise was unsprung mass, specifically steering
+                and brakes. Due to this experience, I acquired advanced
+                knowledge in CATIA V5 software and structural analysis with
+                ANSYS. In addition, I collaborated in the manufacture of
+                automotive parts in collaboration with different professional
+                training centres and assembled some of them in the final
+                prototype.</span
               ><span class="p"
-                >We were also in charge of going to different colleges, looking
-                for sponsors, and finding and hiring diverse providers for our
-                car.</span
+                >But my work in the team was not limited to the technical area.
+                I was also part of the business team, where I worked creating a
+                product and its subsequent presentation and sale to potential
+                sponsors. This process was carried out in English, simulating an
+                actual situation. Thus, it allowed me to improve my
+                communication and persuasion skills and learn to work as a team
+                and adapt to changing conditions.</span
               ><span class="p"
-                >Apart from the racing competition, we also participated in
-                other categories. I was a part of the business team on which we
-                had to create a product and &quot;sell&quot; it to different
-                investors using a presentation.</span
+                >In summary, my experience in the Formula Student team allowed
+                me to develop technical and soft skills that I consider
+                essential for any professional today.</span
               >
             </p>
           </section>
           <section id="ppap-writer-section">
+            <ul id="links01" class="links">
+              <li class="n01"><a href="#home">Home</a></li>
+              <li class="n02"><a href="#about">About</a></li>
+              <li class="n03">
+                <a href="#full-time-jobs">Projects</a>
+              </li>
+              <li class="n04">
+                <a href="https://sandramartin.hashnode.dev/">Blog</a>
+              </li>
+            </ul>
             <ul class="buttons buttons03">
               <li><a href="#full-time-jobs" class="button n01">Back</a></li>
             </ul>
-            <h2 class="text10">PPAP Writer for the Homologation of Parts</h2>
+            <h2 class="text10">PPAP Writer for Parts Homologation</h2>
             <p class="text16">
               <span class="p"
                 ><strong
@@ -3554,26 +3726,37 @@
                   June 2018 - November 2018</strong
                 ></span
               ><span class="p"
-                >During my first job in an engineering company, I was part of
-                the quality team and responsible for writing the documentation
-                required for the homologation of different elements (PPAP -
-                Production Part Approval Process) in the automotive
-                industry.</span
+                >At Microdeco S.A., my first job in an engineering company, I
+                was part of the quality team in the automotive sector. As
+                responsible for customized components approval for each client
+                according to their drawings, I carried out different quality
+                control activities such as visual inspection and measurements
+                (metrology) using conventional tools and the three-dimensional
+                machine. After carrying out these activities, I would write the
+                corresponding document to standardize the type of part with all
+                the necessary sections and send it to the client for their
+                review and approval.</span
               ><span class="p"
-                >For this, I carried out different quality control activities,
-                such as visual inspection, measurements (metrology) and
-                tridimensional machine measurements.</span
-              ><span class="p"
-                >After checking that all parts met the requirements, my duty was
-                to write the corresponding documentation. Then, I would then
-                send the report to our customers with all the data.</span
-              ><span class="p"
-                >I was also in charge of solving all issues our customers would
-                have regarding the homologation of parts.</span
+                >In addition, I was in charge of directly solving the problems
+                and doubts that the client might have in the approval process,
+                so I maintained constant and effective communication with them.
+                This experience allowed me to develop skills in communication
+                and teamwork within a production environment, as well as
+                quality.</span
               >
             </p>
           </section>
           <section id="design-in-r-d-section">
+            <ul id="links01" class="links">
+              <li class="n01"><a href="#home">Home</a></li>
+              <li class="n02"><a href="#about">About</a></li>
+              <li class="n03">
+                <a href="#full-time-jobs">Projects</a>
+              </li>
+              <li class="n04">
+                <a href="https://sandramartin.hashnode.dev/">Blog</a>
+              </li>
+            </ul>
             <ul class="buttons buttons03">
               <li><a href="#full-time-jobs" class="button n01">Back</a></li>
             </ul>
@@ -3585,21 +3768,37 @@
                   January 2019 - October 2019</strong
                 ></span
               ><span class="p"
-                >I worked for ten months in Altran as a design engineer. My job
-                was to design the airship structure and carry out different
-                structural analyses. Those analyses were mainly linear static
-                structural and modal analyses.<br />
-                To keep track of our progress as a team, I wrote different
-                documents explaining the state of work and how I was doing the
-                design; I also needed to create presentations for the
-                stakeholders.</span
+                >At Altran, I had the opportunity to work as a design and
+                structural analysis engineer in the space and defence R&D
+                department, specifically in an air taxi structure design. During
+                my time there, I used CATIA V5 to design the structure and
+                Hypermesh to perform various structural analyses, including
+                linear, buckling, non-linear, and modal.</span
               ><span class="p"
-                >The software used for CAD modelling was CATIA V5, and for the
-                analyses, Hypermesh.</span
+                >In addition, I wrote several documents that detailed the design
+                process to present to different collaborating entities and my
+                superiors. I worked in a multidisciplinary team with other
+                engineers from different specialities, which allowed me to
+                develop teamwork and efficient communication skills in a highly
+                technical environment.</span
+              ><span class="p"
+                >This experience expanded my structural design and analysis
+                knowledge while acquiring essential technical reporting and
+                teamwork skills.</span
               >
             </p>
           </section>
           <section id="mechanical-design-section">
+            <ul id="links01" class="links">
+              <li class="n01"><a href="#home">Home</a></li>
+              <li class="n02"><a href="#about">About</a></li>
+              <li class="n03">
+                <a href="#full-time-jobs">Projects</a>
+              </li>
+              <li class="n04">
+                <a href="https://sandramartin.hashnode.dev/">Blog</a>
+              </li>
+            </ul>
             <ul class="buttons buttons03">
               <li><a href="#full-time-jobs" class="button n01">Back</a></li>
             </ul>
@@ -3611,19 +3810,24 @@
                   November 2019 - January 2022</strong
                 ></span
               ><span class="p"
-                >I worked for more than two years as a mechanical design
-                engineer in SENER AEROESPACIAL. My job was to design different
-                mechanisms and mechanical components and carry out necessary
-                structural analyses, such as linear static structural or modal
-                and buckling analysis. For that purpose, I used CATIA V5.</span
+                >I worked as a mechanism design engineer for the aerospace
+                sector in SENER Aeroespacial for more than two years. In this
+                position, I was responsible for the 3D designs and preliminary
+                structural analyses using CATIA V5, including linear, modal and
+                buckling studies. In addition, I developed the manufacturing
+                drawings of the designed components, assembly guides and design
+                reports.</span
               ><span class="p"
-                >I was also in charge of doing the required manufacturing
-                drawings of the components and writing different reports
-                regarding the design I worked on, such as assembly guides or
-                design reports.</span
+                >Also, as part of my work, I assembled the mechanisms I designed
+                and assisted in prototype validation tests. This experience
+                allowed me to develop technical skills in mechanisms design,
+                analysis, manufacturing drawings and technical documentation
+                elaboration.</span
               ><span class="p"
-                >Last but not least, I assembled the mechanisms I designed and
-                communicated with some of our clients.</span
+                >In summary, my experience in SENER Aeroespacial allowed me to
+                acquire valuable skills in the aerospace industry and to work in
+                a production environment that required precision and attention
+                to detail in the design and manufacture of the components.</span
               ><span class="p"
                 >You can check this example video, courtesy of the company,
                 showcasing some of the mechanisms designed in SENER
@@ -3651,8 +3855,25 @@
                 </ul>
               </div>
             </div>
+            <p class="text16">
+              <span class="p"
+                >I mainly participated in the fluid transfer mechanisms design
+                that would go installed in the resource transfer umbilical we
+                see in the video above.</span
+              >
+            </p>
           </section>
           <section id="system-engineering-prof-section">
+            <ul id="links01" class="links">
+              <li class="n01"><a href="#home">Home</a></li>
+              <li class="n02"><a href="#about">About</a></li>
+              <li class="n03">
+                <a href="#full-time-jobs">Projects</a>
+              </li>
+              <li class="n04">
+                <a href="https://sandramartin.hashnode.dev/">Blog</a>
+              </li>
+            </ul>
             <ul class="buttons buttons03">
               <li><a href="#full-time-jobs" class="button n01">Back</a></li>
             </ul>
@@ -3664,19 +3885,41 @@
                   January 2022 - October 2022</strong
                 ></span
               ><span class="p"
-                >As a systems engineering professional, I&#039;m responsible for
-                supporting the factory and wind farms. I&#039;m in charge of
-                providing solutions to the problems that arise and carrying
-                diverse structural analyses for the actuation components (using
-                internal tools).</span
+                >At Siemens Gamesa as a systems engineer, I worked in a
+                fast-paced and exciting environment where I supported the
+                factory and wind turbine plants in everything related to
+                actuation systems. Whenever problems or doubts arose, I was
+                responsible for carrying out exhaustive analyzes of the
+                components involved using internal tools and working in
+                collaboration with different departments, which allowed me to
+                develop skills in both communication and problem-solving.</span
               ><span class="p"
-                >Also, I&#039;m part of the design team, helping with the
-                configuration and design of different wind farms and wind
-                turbines.</span
+                >In addition, I also supported the design team in the
+                configuration and design of specific wind turbines for different
+                plants, taking into account the client's requirements and the
+                working conditions of the wind turbines. This experience helped
+                me have a complete vision of the manufacturing and design
+                process of wind turbines, which allowed me to improve in
+                identifying and solving problems.</span
+              ><span class="p"
+                >In general, my experience at Siemens Gamesa allowed me to
+                develop valuable skills in the systems engineering area and let
+                me work in a multidisciplinary environment, always focusing on
+                quality and excellence in customer service.</span
               >
             </p>
           </section>
           <section id="mechanical-system-section">
+            <ul id="links01" class="links">
+              <li class="n01"><a href="#home">Home</a></li>
+              <li class="n02"><a href="#about">About</a></li>
+              <li class="n03">
+                <a href="#full-time-jobs">Projects</a>
+              </li>
+              <li class="n04">
+                <a href="https://sandramartin.hashnode.dev/">Blog</a>
+              </li>
+            </ul>
             <ul class="buttons buttons03">
               <li><a href="#full-time-jobs" class="button n01">Back</a></li>
             </ul>
@@ -3690,15 +3933,25 @@
                   October 2022 - Currently</strong
                 ></span
               ><span class="p"
-                >I work as a mechanical systems design engineer in the aerospace
-                industry. I mainly focus on creating different components for
-                European military aircraft.</span
+                >I currently work at Airbus Defence and Space as a system design
+                engineer specializing in the fuel system for European military
+                aircraft. My primary responsibility is to design the different
+                components and piping routes of the fuel systems, collaborating
+                with other engineers on the team to reduce costs and weight
+                without compromising quality. I use the 3DX platform to design
+                and simulate different solutions. I also write technical reports
+                to document the design process of the fuel system.</span
               ><span class="p"
-                >In my job, I&#039;m in charge of designing and validating
-                mechanical system installation components and assemblies (cabin
-                and vehicle systems) optimized in terms of weight, cost,
-                performance and more requirements with the other team members.
-                For this, I mainly work with CATIA V5 and 3DX.</span
+                >Working on the latest European military aircraft allows me to
+                be in contact with innovative technologies and processes.
+                Working in such a dynamic and challenging environment has
+                allowed me to develop skills in managing complex projects and
+                making decisions under pressure.</span
+              ><span class="p"
+                >In summary, my experience at Airbus has allowed me to develop
+                technical skills in system design and project management while
+                allowing me to work on projects of high impact and relevance to
+                the aeronautical industry.</span
               >
             </p>
             <div class="gallery gallery01">
@@ -3715,51 +3968,170 @@
               </div>
             </div>
           </section>
-          <section id="beekeeping-video-section">
-            <ul class="buttons buttons03">
-              <li><a href="#freelance-jobs" class="button n01">Back</a></li>
+          <section id="clamp-section">
+            <ul id="links01" class="links">
+              <li class="n01"><a href="#home">Home</a></li>
+              <li class="n02"><a href="#about">About</a></li>
+              <li class="n03">
+                <a href="#mechanical-engineering">Projects</a>
+              </li>
+              <li class="n04">
+                <a href="https://sandramartin.hashnode.dev/">Blog</a>
+              </li>
             </ul>
-            <h2 class="text10">Beekeeping video translation</h2>
+            <ul class="buttons buttons03">
+              <li>
+                <a href="#mechanical-engineering" class="button n01">Back</a>
+              </li>
+            </ul>
+            <h2 class="text10">Pipe Clamp Design and Analysis</h2>
+            <div id="image06" class="image">
+              <span class="frame"
+                ><img
+                  src="images/projects/mechanical engineering/Clamp.jpg"
+                  alt="Clamp"
+              /></span>
+            </div>
             <p class="text16">
-              <span class="p"><strong>Started in: 2021 - 03 - 31</strong></span
-              ><span class="p"
-                >I have carried out different translation projects for the Hive
-                Alive company.</span
-              ><span class="p"
-                ><strong><em>01 - Spanish video transcription:</em></strong> The
-                first part of this job was to transcribe a video about
-                beekeeping in Spanish.</span
-              ><span class="p"
-                ><strong
-                  ><em>02 - Translation from Spanish to English:</em></strong
-                >
-                For the second part, we translated the tape from Spanish to
-                English.</span
-              ><span class="p"
-                ><strong><em>03 - Text format Update:</em></strong> Finally, we
-                changed the format of the text from transcription to plain
-                text.</span
-              ><span class="p"
-                >I carried out this job with my coworker José Luis
-                Anguiano.</span
-              ><span class="p"><strong>PROJECT IMAGES:</strong></span>
+              <span class="p"
+                >As a personal project, I designed a pipe clamp using CATIA V5
+                and carried out a mechanical analysis of finite elements to
+                validate its resistance. I established the necessary boundary
+                conditions, such as contacts or screwed unions. After, I applied
+                a downward vertical load to simulate the force generated by the
+                fluid that runs through the pipe. The material used was generic
+                stainless steel, and I worked on the parts validation that makes
+                up the clamp to ensure its resistance and functionality.</span
+              >
+            </p>
+            <div class="gallery gallery01">
+              <div class="inner">
+                <ul>
+                  <li>
+                    <img
+                      src="images/projects/mechanical engineering/clamp/CondicionesContorno.jpg"
+                      alt="Boundary Conditions"
+                    />
+                    <div class="caption"><p>Boundary Conditions</p></div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <p class="text16">
+              <span class="p"
+                >After analyzing the Von Mises stresses and the displacements in
+                the model mesh nodes, I verified that the maximum stresses
+                exceeded the limits allowed in some points of concentration of
+                tensions (around some holes, where the precision of the analysis
+                tends to be very low), so I decided to do more exhaustive
+                studies. However, the displacements were small (maximum was 6mm)
+                compared to the model dimensions (around 125mm diameter), so
+                they did not negatively affect the design.</span
+              >
+            </p>
+            <div class="gallery gallery01">
+              <div class="inner">
+                <ul>
+                  <li>
+                    <img
+                      src="images/projects/mechanical engineering/clamp/VonMises1.jpg"
+                      alt="Von Mises Stress"
+                    />
+                    <div class="caption"><p>Von Mises Stress</p></div>
+                  </li>
+                  <li>
+                    <img
+                      src="images/projects/mechanical engineering/clamp/VonMises2.jpg"
+                      alt="Von Mises Stress"
+                    />
+                    <div class="caption"><p>Von Mises Stress</p></div>
+                  </li>
+                  <li>
+                    <img
+                      src="images/projects/mechanical engineering/clamp/Deformada1.jpg"
+                      alt="Displacement"
+                    />
+                    <div class="caption"><p>Displacement</p></div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <p class="text16">
+              <span class="p"
+                >I rendered the model using Keyshot, which allowed me to create
+                photorealistic images and animations to show the design
+                attractively.
+              </span>
             </p>
             <div class="gallery gallery06">
               <div class="inner">
                 <ul>
                   <li>
-                    <img src="images/freelance/abejas1.png" alt="Bee text" />
+                    <img
+                      src="images/projects/mechanical engineering/clamp/01Abrazadera.jpg"
+                      alt="Clamp"
+                    />
                   </li>
                   <li>
-                    <img src="images/freelance/abejas2.png" alt="Bee text" />
+                    <img
+                      src="images/projects/mechanical engineering/clamp/02Abrazadera.jpg"
+                      alt="Clamp"
+                    />
+                  </li>
+                  <li>
+                    <img
+                      src="images/projects/mechanical engineering/clamp/03Abrazadera.jpg"
+                      alt="Clamp"
+                    />
+                  </li>
+                  <li>
+                    <img
+                      src="images/projects/mechanical engineering/clamp/05Abrazadera.jpg"
+                      alt="Clamp"
+                    />
+                  </li>
+                  <li>
+                    <img
+                      src="images/projects/mechanical engineering/clamp/06Abrazadera.jpg"
+                      alt="Clamp"
+                    />
+                  </li>
+                  <li>
+                    <img
+                      src="images/projects/mechanical engineering/clamp/07Abrazadera.jpg"
+                      alt="Clamp"
+                    />
+                  </li>
+                  <li>
+                    <img
+                      src="images/projects/mechanical engineering/clamp/08Abrazadera.jpg"
+                      alt="Clamp"
+                    />
                   </li>
                 </ul>
               </div>
             </div>
+            <p class="text16">
+              <span class="p"
+                >This project has demonstrated my ability to design and simulate
+                complex mechanical parts using finite elements and to find
+                technical solutions to engineering problems.</span
+              >
+            </p>
           </section>
-          <section id="cnc-metal-sheet-section">
+          <section id="steering-gear-section">
+            <ul id="links01" class="links">
+              <li class="n01"><a href="#home">Home</a></li>
+              <li class="n02"><a href="#about">About</a></li>
+              <li class="n03">
+                <a href="#mechanical-engineering">Projects</a>
+              </li>
+              <li class="n04">
+                <a href="https://sandramartin.hashnode.dev/">Blog</a>
+              </li>
+            </ul>
             <ul class="buttons buttons03">
-              <li><a href="#freelance-jobs" class="button n01">Back</a></li>
+              <li><a href="#mechanical-engineering" class="button n01">Back</a></li>
             </ul>
             <h2 class="text10">Metal Sheet for CNC Machining</h2>
             <p class="text16">
@@ -3919,7 +4291,7 @@
               >
             </p>
           </section>
-          <section id="clamp-section">
+          <section id="clamp1-section">
             <ul class="buttons buttons03">
               <li>
                 <a href="#mechanical-engineering" class="button n01">Back</a>
@@ -4034,7 +4406,7 @@
               </ul>
             </div>
           </section>
-          <section id="steering-gear-section">
+          <section id="steering-gear1-section">
             <ul class="buttons buttons03">
               <li>
                 <a href="#mechanical-engineering" class="button n01">Back</a>
@@ -4824,17 +5196,6 @@
                     <use xlink:href="#icon-90b"></use>
                   </svg>
                   <span class="label">LinkedIn</span></a
-                >
-              </li>
-              <li>
-                <a
-                  class="n02"
-                  target="_blank"
-                  href="https://www.fiverr.com/sandra1me30"
-                  ><svg>
-                    <use xlink:href="#icon-9c0"></use>
-                  </svg>
-                  <span class="label">Fiverr</span></a
                 >
               </li>
               <li>
